@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "versions",
+  "info": {
+    "singularName": "version",
+    "pluralName": "versions",
+    "displayName": "Version"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Description": {
+      "type": "text"
+    },
+    "HtmlCode": {
+      "type": "blocks"
+    },
+    "JsCode": {
+      "type": "blocks"
+    },
+    "CssCode": {
+      "type": "blocks"
+    },
+    "code_project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::code-project.code-project",
+      "inversedBy": "versions"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "code_projects",
+  "info": {
+    "singularName": "code-project",
+    "pluralName": "code-projects",
+    "displayName": "CodeProject"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string"
+    },
+    "HtmlCode": {
+      "type": "blocks"
+    },
+    "JsCode": {
+      "type": "blocks"
+    },
+    "CssCode": {
+      "type": "blocks"
+    },
+    "challenge": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::challenge.challenge",
+      "inversedBy": "code_projects"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "code_projects"
+    },
+    "versions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::version.version",
+      "mappedBy": "code_project"
+    }
+  }
+}

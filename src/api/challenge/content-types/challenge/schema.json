@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "challenges",
+  "info": {
+    "singularName": "challenge",
+    "pluralName": "challenges",
+    "displayName": "Challenge",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "Difficulty": {
+      "type": "string"
+    },
+    "Images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "code_projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::code-project.code-project",
+      "mappedBy": "challenge"
+    },
+    "ShortDescription": {
+      "type": "string"
+    }
+  }
+}
