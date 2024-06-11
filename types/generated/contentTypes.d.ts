@@ -384,6 +384,7 @@ export interface ApiChallengeChallenge extends Schema.CollectionType {
       'api::code-project.code-project'
     >;
     ShortDescription: Attribute.String;
+    styleGuide: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

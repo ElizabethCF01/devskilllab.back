@@ -37,6 +37,9 @@
     },
     "ShortDescription": {
       "type": "string"
+    },
+    "styleGuide": {
+      "type": "richtext"
     }
   }
 }
